@@ -3,11 +3,12 @@ package main
 import (
 	"errors"
 	"fmt"
+	"os"
+
 	"github.com/akamensky/argparse"
 	"github.com/alapierre/go-ksef-client/ksef/api"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
-	"os"
 )
 
 type context struct {
@@ -92,9 +93,8 @@ func config() {
 		fmt.Printf("WARNING: Can't load %s\n", err)
 	}
 
-	keysPath := viper.GetString("mfKeys")
 	ksefEnv := viper.GetString("env")
-	c.pathToKey = fmt.Sprintf("%s/%s/publicKey.pem", keysPath, ksefEnv)
+	c.pathToKey = "publicKey.pem"
 	c.env = ksefEnv
 
 }

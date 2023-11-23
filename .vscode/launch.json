@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch test function",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "cmd/ksef-cli",
+
+      "args": [
+        "login",
+        "-t",
+        "DEFEEF5BBCB4512E200E6667E28B0A7087D1033DE197E0B348785D33D4E72184",
+        "-i",
+        "8141022278"
+      ]
+    }
+  ]
+}
